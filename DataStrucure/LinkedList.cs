@@ -48,5 +48,22 @@ namespace DataStrucure
             head = newNode;
             Console.WriteLine("{0} added into the linked list", newNode.data);
         }
+        public void Append(int data)
+        {
+            Node newNode = new Node(data);
+            if (head == null)
+                head = newNode;
+            else
+            {
+                temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = newNode;
+            }
+            Console.WriteLine("{0} is added into linkedlist", newNode.data);
+
+        }
     }
 }
