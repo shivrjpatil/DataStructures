@@ -65,5 +65,13 @@ namespace DataStrucure
             Console.WriteLine("{0} is added into linkedlist", newNode.data);
 
         }
+        public void Insert(int data)
+        {
+            Node newNode = new Node(data);
+            temp = head.next;
+            head.next = newNode;
+            newNode.next = temp;
+            Console.WriteLine("{0} inserted between {1} and {2}",newNode.data,head.data,newNode.next.data);
+        }
     }
 }
