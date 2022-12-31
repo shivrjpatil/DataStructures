@@ -13,7 +13,7 @@ namespace DataStrucure
         public Node(int data)
         {
             this.data = data;
-            
-        }   
+
+        }
     }
 }

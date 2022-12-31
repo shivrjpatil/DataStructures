@@ -41,5 +41,12 @@ namespace DataStrucure
                 temp = temp.next;
             }
         }
+        public void AddFirst(int data)
+        {
+           Node newNode =new Node(data);
+            newNode.next = head;
+            head = newNode;
+            Console.WriteLine("{0} added into the linked list", newNode.data);
+        }
     }
 }
