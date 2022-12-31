@@ -73,5 +73,15 @@ namespace DataStrucure
             newNode.next = temp;
             Console.WriteLine("{0} inserted between {1} and {2}",newNode.data,head.data,newNode.next.data);
         }
+        public void DeleteFirst()
+        {
+            if (head == null)
+                Console.WriteLine("\nlinked list is empty");
+            else
+            {
+                head = head.next;
+                Console.WriteLine("\nRemoved first element");
+            }
+        }
     }
 }

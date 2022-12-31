@@ -22,6 +22,8 @@ namespace DataStrucure
             linkedList.Append(70);
             linkedList.Insert(30);
             linkedList.Disaplay();
+            linkedList.DeleteFirst();
+            linkedList.Disaplay();
             Console.ReadLine();
         }
     }
