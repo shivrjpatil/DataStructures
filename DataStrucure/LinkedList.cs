@@ -83,5 +83,26 @@ namespace DataStrucure
                 Console.WriteLine("\nRemoved first element");
             }
         }
+        public void DeleteLast()
+        {
+            if (head == null)
+                Console.WriteLine("Linked List is Empty");
+            else
+            {
+                if (head.next == null)
+                    head = null;
+                else
+                    temp = head;
+                while(temp.next.next!=null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = null;
+
+
+            }
+                Console.WriteLine("\nLast element is deleted");
+            
+        }
     }
 }
