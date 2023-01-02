@@ -83,5 +83,47 @@ namespace DataStrucure
                 Console.WriteLine("\nRemoved first element");
             }
         }
+        public void DeleteLast()
+        {
+            if (head == null)
+                Console.WriteLine("Linked List is Empty");
+            else
+            {
+                if (head.next == null)
+                    head = null;
+                else
+                {
+                    Node temp = head;
+                    while(temp.next.next!=null)
+                    {
+                        temp = temp.next;
+                    }
+                    temp.next = null;
+                    Console.WriteLine("Last element deleted");
+                }
+            }
+        }
+        public void Search(int input)
+        {          
+            bool IsFound = false;
+          if(head==null)
+                Console.WriteLine("Linked List is Empty");
+            else
+            {
+                temp = head;
+                while (temp != null)
+                {
+                    if (temp.data == input)
+                    {
+                         IsFound = true;
+                        Console.WriteLine("Given Element {0} is present", input);
+                        break;
+                    }
+                    temp = temp.next;                        
+                }                
+                if(IsFound=false)
+                   Console.WriteLine("Given Element {0} is not present",input);
+            }
+        }
     }
 }
