@@ -125,5 +125,12 @@ namespace DataStrucure
                    Console.WriteLine("Given Element {0} is not present",input);
             }
         }
+        public void InsertAt(int data)
+        {
+            Node newNode = new Node(data);
+            temp = head.next.next;
+            head.next.next= newNode;    
+            newNode.next= temp;
+        }
     }
 }
