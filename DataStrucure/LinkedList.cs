@@ -132,5 +132,21 @@ namespace DataStrucure
             head.next.next= newNode;    
             newNode.next= temp;
         }
+        public void Size()
+        {
+            int count = 0;
+            temp = head;
+            while(temp!=null)
+            {
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine("the size of the linked list is " + count);
+        }
+        public void Delete(int input)
+        {
+            head.next.next = head.next.next.next;
+            Size();
+        }
     }
 }
